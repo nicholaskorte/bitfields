@@ -1,0 +1,17 @@
+//this is my c source code. I got the code from Head First C bu the comments are why I created it
+//make sure you have seen my struct_union_enum page at https://github.com/nicholaskorte/struct_union_enum
+//to start of ypur bitfield. make a struct. it will have the name synth
+
+typedef struct{
+  //all parameters in the struct will be an unsigned int
+  //make sure to leave the amount of bits you want each variable to store after the variable itself.
+  //if you store 8 different unsigned variables it requires 3 bits, e.j. 0-7.   0-15 takes 4 bits
+  unsigned int low_pass_vcf:1;
+  unsigned int filter_coupler:1;
+  unsigned int reverb:1;
+  unsigned int sequential:1;
+  //each variable will only take one bit of space in the memory
+  //if you have 8 single bit-fields in a row. it will store it in a single byte rather than storing them all individually in their own byte.
+}synth;
+
+// do not try to compile this code. it won't work. for obvious reasons. no int main, no calling the struct, etc.
